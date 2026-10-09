@@ -1,0 +1,79 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\admin> New-Item -ItemType File -Path "config.json", "sensors.py", ".env"
+
+
+    Directory: C:\Users\admin
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         10/9/2026   2:22 PM              0 config.json
+-a----         10/9/2026   2:22 PM              0 sensors.py
+-a----         10/9/2026   2:22 PM              0 .env
+
+
+PS C:\Users\admin>  attrib +h .env
+PS C:\Users\admin> Copy-Item -Path "smart-farm\code" -Destination "backup\code_v1" -Recurse
+PS C:\Users\admin> Get-ChildItem -Force
+
+
+    Directory: C:\Users\admin
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         10/8/2026  11:08 AM                .rikkei-ide
+d-----         10/7/2026   9:02 PM                ansel
+d--h--         10/4/2026   4:41 PM                AppData
+d--hsl         10/4/2026   4:41 PM                Application Data
+d-----         10/9/2026   2:22 PM                backup
+d-r---         10/4/2026   4:41 PM                Contacts
+d--hsl         10/4/2026   4:41 PM                Cookies
+d-----         10/7/2026  11:09 AM                Desktop
+d-----         10/7/2026  11:09 AM                Documents
+d-r---         10/8/2026  11:00 AM                Downloads
+d-----         10/9/2026   2:03 PM                drink_module
+d-r---         10/4/2026   4:41 PM                Favorites
+d-r---         10/4/2026   4:41 PM                Links
+d--hsl         10/4/2026   4:41 PM                Local Settings
+d-r---         10/4/2026   4:41 PM                Music
+d--hsl         10/4/2026   4:41 PM                My Documents
+d--hsl         10/4/2026   4:41 PM                NetHood
+d-r---         10/4/2026   4:42 PM                OneDrive
+dar--l         10/9/2026   1:49 PM                OneDrive - ptit.edu.vn
+d--hsl         10/4/2026   4:41 PM                PrintHood
+d--hsl         10/4/2026   4:41 PM                Recent
+d-r---         10/4/2026   4:41 PM                Saved Games
+d-r---         10/4/2026   4:57 PM                Searches
+d--hsl         10/4/2026   4:41 PM                SendTo
+d-----         10/9/2026   1:47 PM                Smart Farm Project
+d-----         10/9/2026   2:17 PM                smart-farm
+d--hsl         10/4/2026   4:41 PM                Start Menu
+d--hsl         10/4/2026   4:41 PM                Templates
+d-r---         10/7/2026   9:02 PM                Videos
+-a----         10/9/2026   2:22 PM           7763 .bash_history
+-a-h--         10/9/2026   2:22 PM              0 .env
+-a----         10/8/2026   9:55 AM             58 .gitconfig
+-a----         10/4/2026   9:43 PM           1090 AMDRM_Install.log
+-a----         10/9/2026   2:22 PM              0 config.json
+-a-h--         10/9/2026   4:43 AM        8650752 NTUSER.DAT
+-a-hs-         10/4/2026   4:41 PM         917504 ntuser.dat.LOG1
+-a-hs-         10/4/2026   4:41 PM        2236416 ntuser.dat.LOG2
+-a-hs-         10/4/2026   5:15 PM          65536 NTUSER.DAT{9812e30d-bfd7-11f1-9f21-8c8b5b9cc989}.TM.blf
+-a-hs-         10/4/2026   4:41 PM         524288 NTUSER.DAT{9812e30d-bfd7-11f1-9f21-8c8b5b9cc989}.TMContainer000000000
+                                                  00000000001.regtrans-ms
+-a-hs-         10/4/2026   4:41 PM         524288 NTUSER.DAT{9812e30d-bfd7-11f1-9f21-8c8b5b9cc989}.TMContainer000000000
+                                                  00000000002.regtrans-ms
+---hs-         10/4/2026   4:41 PM             20 ntuser.ini
+-a----         10/9/2026   2:22 PM              0 sensors.py
+
+
+PS C:\Users\admin> Copy-Item -Path ".\smart-farm\code" -Destination ".\backup\code_v1" -Recurse
+PS C:\Users\admin> tree .\backup\code_v1 /F
+Folder PATH listing
+Volume serial number is 1819-4242
+C:\USERS\ADMIN\BACKUP\CODE_V1
+└───code
+PS C:\Users\admin>
